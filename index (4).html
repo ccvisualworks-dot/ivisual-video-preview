@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMBER & PLATE | Restaurant Demo</title>
+<meta name="description" content="A modern restaurant website demo by iVisual.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#111;color:#f7f2e8;line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;width:100%;z-index:10;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,.72);backdrop-filter:blur(12px)}
+.logo{font-size:22px;font-weight:800;letter-spacing:3px}
+.logo span{color:#e7a84b}
+.navlinks{display:flex;gap:28px;font-size:14px}
+.navlinks a:hover{color:#e7a84b}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 7% 70px;position:relative;overflow:hidden;background:
+linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.35)),
+url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-120px;bottom:-160px;background:#e7a84b22;filter:blur(15px)}
+.hero-content{max-width:700px;position:relative;z-index:1}
+.kicker{color:#e7a84b;text-transform:uppercase;letter-spacing:4px;font-size:13px;font-weight:bold;margin-bottom:18px}
+h1{font-size:clamp(48px,8vw,92px);line-height:.95;margin-bottom:25px}
+.hero p{font-size:18px;color:#ddd;max-width:570px;margin-bottom:32px}
+.btn{display:inline-block;padding:14px 25px;border:1px solid #e7a84b;background:#e7a84b;color:#111;font-weight:bold;margin-right:10px;border-radius:3px}
+.btn.alt{background:transparent;color:#fff;border-color:#fff}
+section{padding:95px 7%}
+.section-title{font-size:42px;margin-bottom:12px}
+.section-intro{color:#aaa;max-width:650px;margin-bottom:45px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-img{min-height:480px;background:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=85') center/cover;border-radius:8px}
+.about-text p{color:#bbb;margin:20px 0}
+.menu{background:#181818}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#222;border:1px solid #333;padding:25px;border-radius:8px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#e7a84b}
+.card-img{height:190px;border-radius:6px;background:center/cover;margin-bottom:20px}
+.card h3{font-size:22px}
+.price{float:right;color:#e7a84b}
+.card p{color:#aaa;margin-top:8px;font-size:14px}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}
+.gallery div{min-height:220px;background:center/cover;border-radius:7px}
+.gallery .big{grid-row:span 2;min-height:455px}
+.visit{background:#181818;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.info-box{padding:30px;border:1px solid #333;border-radius:8px}
+.info-box h3{color:#e7a84b;margin-bottom:12px}
+footer{padding:30px 7%;display:flex;justify-content:space-between;color:#777;border-top:1px solid #292929}
+.wa{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25d366;color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;z-index:20;box-shadow:0 8px 25px #0008}
+@media(max-width:800px){
+.navlinks{display:none}.about,.visit{grid-template-columns:1fr}.menu-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery .big{grid-row:auto;min-height:300px}section{padding:70px 6%}h1{font-size:58px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">EMBER <span>&</span> PLATE</div>
+  <div class="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a></div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="kicker">Modern dining · Kuala Lumpur</div>
+    <h1>Fire, flavour & good company.</h1>
+    <p>A fictional restaurant demo crafted to show how a premium restaurant website could look and feel.</p>
+    <a class="btn" href="#menu">Explore Menu</a>
+    <a class="btn alt" href="#visit">Reserve a Table</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="about">
+    <div class="about-img"></div>
+    <div class="about-text">
+      <div class="kicker">Our story</div>
+      <h2 class="section-title">Simple ingredients. Big flavour.</h2>
+      <p>EMBER & PLATE brings together open-fire cooking, seasonal ingredients and relaxed hospitality in one warm dining space.</p>
+      <p>From casual lunches to special evenings, every plate is designed to be shared, remembered and enjoyed.</p>
+      <a class="btn" href="#visit">Come Visit Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="kicker">Chef's selection</div>
+  <h2 class="section-title">Popular dishes</h2>
+  <p class="section-intro">Sample menu content for this portfolio demo. Prices and dishes are fictional.</p>
+  <div class="menu-grid">
+    <article class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80')"></div><h3>Charred Salmon <span class="price">RM42</span></h3><p>Roasted vegetables, lemon herb butter and crispy potatoes.</p></article>
+    <article class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80')"></div><h3>Signature Burger <span class="price">RM32</span></h3><p>Grilled beef, smoked cheese, caramelised onion and house sauce.</p></article>
+    <article class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=900&q=80')"></div><h3>Truffle Pasta <span class="price">RM36</span></h3><p>Fresh pasta, wild mushrooms, parmesan and truffle cream.</p></article>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="kicker">Inside EMBER & PLATE</div>
+  <h2 class="section-title">A place to linger.</h2>
+  <p class="section-intro">Visual gallery section for a restaurant portfolio concept.</p>
+  <div class="gallery">
+    <div class="big" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85')"></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=80')"></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80')"></div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div>
+    <div class="kicker">Make it a night</div>
+    <h2 class="section-title">Book your table.</h2>
+    <p class="section-intro">This demo button opens WhatsApp with a ready-made enquiry. Replace the number with a real restaurant's number for a client project.</p>
+    <a class="btn" href="https://wa.me/60123456789?text=Hi%20EMBER%20%26%20PLATE%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank">Reserve via WhatsApp</a>
+  </div>
+  <div class="info-box">
+    <h3>Opening Hours</h3>
+    <p>Mon – Thu: 11:30 AM – 10:00 PM</p>
+    <p>Fri – Sat: 11:30 AM – 11:00 PM</p>
+    <p>Sunday: 11:30 AM – 9:00 PM</p>
+    <br>
+    <h3>Location</h3>
+    <p>88 Jalan Example, Kuala Lumpur</p>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 EMBER & PLATE · Demo website</div>
+  <div>Designed by iVisual</div>
+</footer>
+
+<a class="wa" href="https://wa.me/60123456789?text=Hi%20EMBER%20%26%20PLATE%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" aria-label="WhatsApp">WA</a>
+</body>
+</html>
