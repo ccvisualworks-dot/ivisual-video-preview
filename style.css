@@ -20,3 +20,5 @@ body[data-page=contact]{--glow-a:#1bb7a1;--glow-b:#8141be;--glow-c:#cc668c;--glo
 .ambient::after{opacity:.85}.ambient canvas{opacity:.83}
 .grain{background:linear-gradient(90deg,#08152888,transparent 80%),linear-gradient(0deg,#09172b99,transparent 65%)}
 header,footer,.hero-bottom{border-color:#c4daff40}.browser{border-color:#bc9eff80;box-shadow:0 35px 85px #06102b80,0 0 80px #956bff35}.browser-top{background:#202f51}.card,.contact-panel{background:var(--glass);border-color:#c5c6fb44}.card:hover{border-color:#d5c1ff99}.motion{position:fixed;background:#152844ed}.field input,.field textarea,.field select{background:#12243b}.btn:not(.primary){background:#10263d99}
+
+body[data-page^="roadtrip"] .whatsapp .wa-brand-mark{display:grid;place-items:center;width:100%;height:100%;padding:0 0 3px;color:#052124;font:700 30px/1 Arial,sans-serif}
