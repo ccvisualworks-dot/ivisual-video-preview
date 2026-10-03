@@ -52,17 +52,19 @@ footer{padding:30px 7%;display:flex;justify-content:space-between;color:#777;bor
 }
 </style>
 
+
 <style>
-.iv-back-link{position:fixed;z-index:99;left:16px;top:82px;padding:10px 15px;border-radius:999px;background:rgba(12,18,32,.88);color:#fff;border:1px solid rgba(255,255,255,.58);font:700 13px Arial,sans-serif;text-decoration:none;backdrop-filter:blur(10px);box-shadow:0 4px 18px rgba(0,0,0,.24);transition:transform .2s,background .2s}
-.iv-back-link:hover{transform:translateY(-2px);background:#244a43}
-@media(max-width:700px){.iv-back-link{top:74px;left:12px;padding:9px 12px;font-size:12px}}
+.iv-back-link{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:9px 13px;border:1px solid #e7a84b;border-radius:3px;background:transparent;color:#f7f2e8;font:700 13px Arial,sans-serif;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s,transform .2s}
+.iv-back-link:hover{background:#e7a84b;color:#111;transform:translateY(-1px)}
+@media(max-width:800px){.iv-back-link{font-size:12px;padding:8px 10px}}
+@media(max-width:500px){nav{padding:14px 4%}.logo{font-size:18px;letter-spacing:2px}.iv-back-link{font-size:11px;padding:7px 9px}}
 </style>
 </head>
 <body>
-<a class="iv-back-link" href="../../index.html" aria-label="Back to iVisual.cc portfolio">← Back to iVisual.cc</a>
 <nav>
   <div class="logo">EMBER <span>&</span> PLATE</div>
   <div class="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a></div>
+  <a class="iv-back-link" href="../../index.html" aria-label="Back to iVisual.cc portfolio">← Back to iVisual.cc</a>
 </nav>
 
 <header class="hero" id="home">
