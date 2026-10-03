@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PEANUT LULU | Pet & Dog Shop Demo</title>
+<meta name="description" content="PEANUT LULU — a warm, modern pet and dog shop website demo designed by iVisual.">
+<style>
+:root{
+  --cream:#fff9ef; --paper:#ffffff; --ink:#202321; --muted:#6c716b;
+  --green:#274b3b; --green2:#35634e; --peach:#f4a261; --peach2:#ffd7ad;
+  --line:#eadfce; --shadow:0 18px 50px rgba(38,43,35,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,249,239,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{max-width:1180px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-weight:900;letter-spacing:2px;font-size:20px;color:var(--green)}
+.logo span{display:block;font-size:10px;letter-spacing:3px;color:var(--muted);font-weight:700}
+.links{display:flex;gap:24px;font-size:14px;font-weight:700}
+.links a:hover{color:var(--peach)}
+.navbtn{background:var(--green);color:white;padding:10px 16px;border-radius:999px;font-size:13px;font-weight:800}
+.hero{max-width:1180px;margin:0 auto;padding:58px 24px 72px;display:grid;grid-template-columns:1fr 1.08fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;background:var(--peach2);color:var(--green);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:1px;margin-bottom:18px}
+h1{font-size:clamp(48px,7vw,82px);line-height:.95;letter-spacing:-4px;color:var(--green);margin-bottom:22px}
+.hero p{font-size:18px;color:var(--muted);max-width:540px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 20px;border-radius:999px;font-weight:900;font-size:14px}
+.primary{background:var(--green);color:white}
+.secondary{border:1px solid var(--line);background:white}
+.heroimg{position:relative}
+.heroimg img{width:100%;height:510px;object-fit:cover;border-radius:34px;box-shadow:var(--shadow);display:block}
+.badge{position:absolute;left:-18px;bottom:22px;background:white;border:1px solid var(--line);padding:15px 18px;border-radius:18px;box-shadow:var(--shadow);font-size:13px;font-weight:800}
+.badge b{display:block;color:var(--green);font-size:17px}
+section{padding:78px 24px}
+.wrap{max-width:1180px;margin:auto}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
+.sectionhead h2{font-size:40px;letter-spacing:-1.5px;color:var(--green)}
+.sectionhead p{max-width:500px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 8px 28px rgba(38,43,35,.05)}
+.icon{width:48px;height:48px;border-radius:15px;background:var(--peach2);display:grid;place-items:center;font-size:23px;margin-bottom:18px}
+.card h3{font-size:20px;color:var(--green);margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
+.shop{background:#f3eadc}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product{background:white;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.product .pic{height:190px;background:linear-gradient(135deg,#f9d7b0,#edf0df);display:grid;place-items:center;font-size:70px}
+.productbody{padding:20px}
+.product h3{color:var(--green);margin-bottom:5px}.price{font-weight:900;font-size:18px;margin:12px 0}.tag{font-size:11px;font-weight:900;color:var(--green);background:#edf0df;padding:6px 9px;border-radius:999px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.aboutbox{background:var(--green);color:white;border-radius:30px;padding:38px}
+.aboutbox h2{font-size:42px;line-height:1.05;margin-bottom:16px}.aboutbox p{color:#e7eee9}
+.contact{background:var(--green);color:white}.contact .sectionhead h2{color:white}.contact .sectionhead p{color:#dce8e1}
+.contactgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.contactcard{background:#315844;border:1px solid rgba(255,255,255,.12);padding:28px;border-radius:22px}.contactcard h3{margin-bottom:10px}.contactcard p{color:#dce8e1}
+footer{background:#193326;color:#cbd8d0;padding:24px;text-align:center;font-size:12px}
+.wa{position:fixed;right:22px;bottom:22px;width:54px;height:54px;border-radius:50%;background:#25D366;color:white;display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.18);z-index:30}
+@media(max-width:850px){
+ .links{display:none}.hero,.about,.contactgrid{grid-template-columns:1fr}.hero{padding-top:35px}.heroimg img{height:390px}
+ .cards,.products{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead p{margin-top:10px}
+ h1{letter-spacing:-2px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="navin">
+    <a class="logo" href="#home">PEANUT LULU<span>PET & DOG SHOP</span></a>
+    <div class="links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#care">Dog Care</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <a class="navbtn" href="#contact">WhatsApp Us</a>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+  <div>
+    <div class="eyebrow">🐾 MADE FOR HAPPY DOGS</div>
+    <h1>Good things for your best friend.</h1>
+    <p>PEANUT LULU is a friendly pet & dog shop concept for everyday food, treats, toys and care essentials — made to feel warm, simple and local.</p>
+    <div class="actions"><a class="btn primary" href="#shop">Shop Dog Essentials</a><a class="btn secondary" href="#contact">Ask on WhatsApp</a></div>
+  </div>
+  <div class="heroimg">
+    <img src="assets/peanut-lulu-dogs.jpg" alt="Two happy dogs under a night sky">
+    <div class="badge"><b>PEANUT + LULU</b>two happy faces, one happy home</div>
+  </div>
+</section>
+
+<section id="care">
+<div class="wrap">
+  <div class="sectionhead"><h2>Everything dogs love.</h2><p>A simple mix of products and everyday care services, presented in a clean Malaysian-friendly shop style.</p></div>
+  <div class="cards">
+    <div class="card"><div class="icon">🥣</div><h3>Food & Nutrition</h3><p>Everyday dog food and treats for different ages, sizes and routines.</p></div>
+    <div class="card"><div class="icon">🧸</div><h3>Toys & Walks</h3><p>Chew toys, collars, leads and fun essentials for playtime and outdoor walks.</p></div>
+    <div class="card"><div class="icon">🛁</div><h3>Dog Care</h3><p>Bath, basic grooming and nail-care services for a fresh and comfortable pup.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="shop" id="shop">
+<div class="wrap">
+  <div class="sectionhead"><h2>Dog shop picks</h2><p>Demo products with RM pricing. Easy to replace with a real customer's products later.</p></div>
+  <div class="products">
+    <div class="product"><div class="pic">🥩</div><div class="productbody"><span class="tag">BEST SELLER</span><h3>Premium Dog Food</h3><p>Balanced everyday nutrition.</p><div class="price">RM89.90</div></div></div>
+    <div class="product"><div class="pic">🦴</div><div class="productbody"><span class="tag">DOG FAVOURITE</span><h3>Training Treats</h3><p>Small bites for good behaviour.</p><div class="price">RM18.90</div></div></div>
+    <div class="product"><div class="pic">🎾</div><div class="productbody"><span class="tag">PLAY TIME</span><h3>Chew & Play Toy</h3><p>Fun for active pups at home.</p><div class="price">RM24.90</div></div></div>
+    <div class="product"><div class="pic">🦮</div><div class="productbody"><span class="tag">WALK READY</span><h3>Collar & Lead Set</h3><p>Comfortable everyday walking set.</p><div class="price">RM39.90</div></div></div>
+    <div class="product"><div class="pic">🧴</div><div class="productbody"><span class="tag">CARE</span><h3>Dog Grooming Set</h3><p>Simple home grooming essentials.</p><div class="price">RM29.90</div></div></div>
+    <div class="product"><div class="pic">🛏️</div><div class="productbody"><span class="tag">COSY</span><h3>Soft Dog Bed</h3><p>A comfy place to rest after play.</p><div class="price">RM69.90</div></div></div>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap about">
+  <div>
+    <div class="eyebrow">ABOUT PEANUT LULU</div>
+    <h2 style="font-size:48px;line-height:1.05;color:var(--green);margin-bottom:18px">A little shop with a big love for dogs.</h2>
+    <p style="color:var(--muted);max-width:570px">This demo is designed as a friendly neighbourhood-style pet shop website. It can be customised later with a real shop address, catalogue, promotions, delivery details and customer reviews.</p>
+  </div>
+  <div class="aboutbox"><h2>Happy dogs.<br>Happy people.</h2><p>From food and treats to toys and grooming essentials, PEANUT LULU keeps everyday dog shopping simple.</p></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap">
+  <div class="sectionhead"><h2>Let's talk about your dog.</h2><p>For this demo, the contact details are placeholders and can be replaced with the customer's real business information.</p></div>
+  <div class="contactgrid">
+    <div class="contactcard"><h3>📱 WhatsApp</h3><p>+60 12-345 6789<br><small>Demo number — replace before launch.</small></p></div>
+    <div class="contactcard"><h3>📍 Malaysia</h3><p>Selangor, Malaysia<br>Mon–Sun · 10:00 AM–7:00 PM</p></div>
+  </div>
+</div>
+</section>
+</main>
+
+<a class="wa" href="https://wa.me/60123456789?text=Hi%20PEANUT%20LULU%2C%20I%20would%20like%20to%20ask%20about%20your%20dog%20products." aria-label="WhatsApp PEANUT LULU">☏</a>
+<footer>PEANUT LULU · Pet & Dog Shop Demo · Designed by iVisual</footer>
+</body>
+</html>
